@@ -6,7 +6,7 @@ mkdir ~/.config/tmux/
 ```
 
 ```bash
-wget https://raw.githubusercontent.com/robnmrz/dotfiles/master/tmux/tmux.conf ~/.config/tmux/
+wget https://raw.githubusercontent.com/robnmrz/dotfiles/master/tmux/tmux.conf -P ~/.config/tmux/
 ```
 
 After that start restart tmux or source the config file
