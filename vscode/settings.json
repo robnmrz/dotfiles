@@ -1,0 +1,33 @@
+{
+    // general settings
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": "none",
+    "workbench.statusBar.visible": false,
+    "window.customTitleBarVisibility": "auto",
+    "extensions.autoUpdate": "onlySelectedExtensions",
+
+   // editor settings
+   "editor.snippetSuggestions": "top",
+   "editor.minimap.enabled": false,
+   "editor.linkedEditing": true,
+
+    // theme and design
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrains Mono'",
+    
+    // terminal settings
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'MesloGS NF'",
+    "terminal.integrated.fontSize": 14,
+    
+    // langauge specific
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+}
