@@ -1,33 +1,269 @@
 {
-    // general settings
-    "workbench.sideBar.location": "right",
-    "workbench.editor.showTabs": "none",
-    "workbench.statusBar.visible": false,
-    "window.customTitleBarVisibility": "auto",
-    "extensions.autoUpdate": "onlySelectedExtensions",
-
-   // editor settings
-   "editor.snippetSuggestions": "top",
-   "editor.minimap.enabled": false,
-   "editor.linkedEditing": true,
-
-    // theme and design
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.productIconTheme": "material-product-icons",
+    // General settings
+    "editor.lineNumbers": "off",
+    "workbench.activityBar.location": "hidden",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'JetBrains Mono'",
+    "breadcrumbs.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.fontFamily": "'JetBrains Mono', 'MesloLGS NF'",
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'MesloLGS NF'",
+    "editor.matchBrackets": "never",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.glyphMargin": false,  
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
     
-    // terminal settings
-    "terminal.integrated.fontFamily": "'JetBrains Mono', 'MesloGS NF'",
-    "terminal.integrated.fontSize": 14,
-    
-    // langauge specific
+    // Suggestions
+    "editor.wordBasedSuggestions":"off",
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.roundedSelection": false,
+    "editor.renderLineHighlight": "none",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "solid",
+    "editor.folding": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.insertSpaces": false,
+    "diffEditor.renderSideBySide": false,
+    "window.closeWhenEmpty": true,
+    "diffEditor.renderIndicators": false,
+    "editor.cursorSurroundingLines": 10,
+    "workbench.enableExperiments": false,
+    "explorer.compactFolders": false,
+    "telemetry.telemetryLevel": "off",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.neovimUseConfigFile": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 4,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    // "editor.guides.indentation": false,
+
+    // Language specific settings
     "[python]": {
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit",
+        }
+    },
+    "go.buildFlags": [
+        "-v"
+                ],
+    "go.useLanguageServer": true,
+    "go.testEnvFile": "",
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+
+        "editor.formatOnType": true,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit",
         },
-        "editor.defaultFormatter": "charliermarsh.ruff",
     },
-}
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit",
+        }
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit",
+                        }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true
+    },
+
+    // Codeium
+    "codeium.enableConfig": {
+        "*": true,
+        "prisma": true
+    },
+ 
+    // Vim settings
+    "vim.useSystemClipboard": true,
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-n>": false,
+        "<C-p>": false,
+    },
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<"],
+            "commands" : ["tab"]
+        },
+        {
+            "before": [">"],
+            "commands" : ["outdent"]
+        },
+        {
+            "before": [
+                "<A-S-up>",
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.copyLinesUpAction",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showAllSymbols",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditor",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusFirstEditorGroup",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusSecondEditorGroup",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "d"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                },
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.toggleTerminal"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "i"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.focus"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                    {
+                        "command": "workbench.action.focusActiveEditorGroup"
+                    }
+                ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<"],
+            "commands" : ["tab"]
+        },
+        {
+            "before": [">"],
+            "commands" : ["outdent"]
+        }
+    ],    
+} 
